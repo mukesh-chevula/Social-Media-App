@@ -7,7 +7,17 @@ const mongoose = require('mongoose');
 const app = express();
 dotenv.config();
 
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI);
 
+// Event handlers for MongoDB connection
+const db = mongoose.connection;
+db.on('error', (error) => console.error('MongoDB connection error:', error));
+db.once('connected', () => console.log('Connected to MongoDB'));
+
+// Middleware
+app.use(morgan('dev'));
+app.use(helmet());
 
 // Routes
 // Define your routes here
