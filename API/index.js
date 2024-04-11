@@ -5,7 +5,7 @@ const helmet = require('helmet')
 const mongoose = require('mongoose')
 const userRoutes = require('./Routes/users')
 const authRoutes = require('./Routes/auth')
-const postRoutes = require('./Routes/post')
+const postRoutes = require('./Routes/posts')
 
 const app = express()
 dotenv.config()
