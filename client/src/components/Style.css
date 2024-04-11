@@ -1,0 +1,27 @@
+/* Style.css */
+.left-container {
+    max-height: calc(100vh - 50px); /* Adjust this value as needed */
+    overflow-y: scroll;
+  }
+
+  
+  /* Custom scrollbar */
+  .left-container::-webkit-scrollbar {
+    width: 10px;
+    height: 50%;
+  }
+  
+  .left-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .left-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  .left-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
