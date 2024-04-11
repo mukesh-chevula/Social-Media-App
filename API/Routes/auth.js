@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const User = require('../Models/user') // Assuming your user model is exported as "User"
+const User = require('../Models/user') 
 const bcrypt = require('bcrypt')
 
 // Register

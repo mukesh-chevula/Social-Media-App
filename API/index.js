@@ -5,7 +5,7 @@ const helmet = require('helmet')
 const mongoose = require('mongoose')
 const userRoutes = require('./Routes/users')
 const authRoutes = require('./Routes/auth')
-
+const postRoutes = require('./Routes/post')
 
 const app = express()
 dotenv.config()
@@ -24,7 +24,7 @@ app.use(morgan('common'))
 app.use(helmet())
 app.use('/api/users',userRoutes)
 app.use('/api/auth',authRoutes)
-
+app.use('/api/posts',postRoutes)
 
 // Routes
 // Define your routes here
