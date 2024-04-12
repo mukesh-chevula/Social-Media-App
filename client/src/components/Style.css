@@ -1,6 +1,6 @@
 /* Style.css */
 .left-container {
-    max-height: calc(100vh - 50px); /* Adjust this value as needed */
+    max-height: calc(100vh - 100px); 
     overflow-y: scroll;
   }
 

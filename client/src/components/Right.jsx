@@ -2,6 +2,8 @@ import { faGift } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Style.css'
+import { Users } from '../dummyData'
+import OnlineFriends from './OnlineFriends'
 
 const Right = () => {
   return (
@@ -21,69 +23,11 @@ const Right = () => {
       <div className="row pb-4 ms-3 fs-6 fw-bold">
         Online Friends:
       </div>
-      <div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div>
-<div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div>
-<div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div>
-<div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div>
-<div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div>
 
-<div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div><div className="row p-3 pb-2">
-  <div className="col-3 position-relative">
-    <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />  
-    <div className=' rounded-circle position-absolute' style={{ width: '12px', height: '12px', top: '0', right: '20px',backgroundColor:'#27be45' }}></div>
-  </div>
-  <div className="col mt-2">
-    Jane
-    </div>
-</div>
+      {Users.map((u)=>(
+      <OnlineFriends key={u.id} user={u}/>
+      ))}
+      
         
     </div>
   )

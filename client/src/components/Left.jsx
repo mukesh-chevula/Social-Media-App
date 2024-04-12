@@ -2,6 +2,8 @@ import { faBookmark, faCalendar, faGraduationCap, faMessage, faQuestionCircle, f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Style.css'
+import {Users} from '../dummyData'
+import Friends from './Friends'
 
 const Left = () => {
   return (
@@ -64,36 +66,9 @@ const Left = () => {
 
         </div>
         <hr className='pt-3' />
-        <div className="row p-3 pt-0 pb-2">
-        <div className="col-3">
-        <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
-        </div>
-          <div className="col mt-2">Jane</div>
-        </div>
-        <div className="row p-3 pb-2">
-        <div className="col-3">
-        <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
-        </div>
-          <div className="col mt-2">Jane</div>
-        </div>
-        <div className="row p-3 pb-2">
-        <div className="col-3">
-        <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
-        </div>
-          <div className="col mt-2">Jane</div>
-        </div>
-        <div className="row p-3 pb-2">
-        <div className="col-3">
-        <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
-        </div>
-          <div className="col mt-2">Jane</div>
-        </div>
-        <div className="row p-3 pb-2">
-        <div className="col-3">
-        <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
-        </div>
-          <div className="col mt-2">Jane</div>
-        </div>
+        {Users.map((u)=>(
+      <Friends key={u.id} user={u}/>
+      ))}
       </div>
   )
 }
