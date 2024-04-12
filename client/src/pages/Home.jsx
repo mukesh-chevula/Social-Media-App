@@ -6,29 +6,22 @@ import Right from '../components/Right'
 
 const Home = () => {
   return (
-    <>
-      <Navbar/>
-      <div className="container-fluid">
-  <div className="row">
-    <div className="col-3">
-      <div style={{ paddingTop: "80px" }}>
-        <Left/>
+    <div style={{ overflow: 'scroll', maxHeight: '100vh' }}>
+      <Navbar style={{ position: 'fixed', zIndex: '1', width: '100%' }} />
+      <div className="container-fluid" style={{ paddingTop: "80px" }}>
+        <div className="row">
+          <div className="col-3">
+            <Left />
+          </div>
+          <div className="col">
+            <Main />
+          </div>
+          <div className="col-3">
+            <Right />
+          </div>
+        </div>
       </div>
     </div>
-    <div className="col">
-      <div style={{ paddingTop: "80px" }}>
-        <Main/>
-      </div>
-    </div>
-    <div className="col-4">
-      <div style={{ paddingTop: "80px" }}>
-        <Right/>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </>
   )
 }
 
