@@ -9,9 +9,15 @@ const Post = ({post}) => {
     const toggleMenu = () => {
       setMenuVisible(!menuVisible);
     };
-
     
-  
+    const [like,setLike] = useState(post.like)
+    const [isliked,setIsLiked] = useState(false)
+
+    const likeHandler = ()=>{
+      setLike(isliked ? like-1 : like+1)
+      setIsLiked(!isliked)
+    }
+
   return (
         <div className="container shadow rounded p-4">
         <div className="row align-items-center">
@@ -45,9 +51,9 @@ const Post = ({post}) => {
         </div>
         <div className="row">
         <div className="col text-secondary">
-  <img src="/assets/like.png" alt="" width={'20px'} style={{ zIndex: '99' }} />
-  <img src="/assets/heart.png" alt="" width={'20px'} style={{ zIndex: '100', right: '5px' }} />
-  {post.like} People liked it
+  <img src="/assets/like.png" alt="" width={'20px'} style={{ zIndex: '99' }} onClick={likeHandler} />
+  <img src="/assets/heart.png" alt="" width={'20px'} onClick={likeHandler} style={{ zIndex: '100', right: '5px' }} />
+  {like} People liked it
 </div>
 <div className="col text-end text-secondary">
 {post.comment} comments
