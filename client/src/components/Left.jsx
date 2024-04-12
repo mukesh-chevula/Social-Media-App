@@ -5,7 +5,7 @@ import './Style.css'
 
 const Left = () => {
   return (
-      <div className="container-fluid fw-bold mt-2 left-container " style={{zIndex:'2'}}>
+      <div className="container-fluid mt-2 left-container " style={{zIndex:'2'}}>
         <div className="row px-3 py-2">
           <div className="col-2">
           <FontAwesomeIcon icon={faRss} size='lg' style={{ color: "#000000" }} />
@@ -65,31 +65,31 @@ const Left = () => {
         </div>
         <hr className='pt-3' />
         <div className="row p-3 pt-0 pb-2">
-        <div className="col-4">
+        <div className="col-3">
         <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
         </div>
           <div className="col mt-2">Jane</div>
         </div>
         <div className="row p-3 pb-2">
-        <div className="col-4">
+        <div className="col-3">
         <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
         </div>
           <div className="col mt-2">Jane</div>
         </div>
         <div className="row p-3 pb-2">
-        <div className="col-4">
+        <div className="col-3">
         <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
         </div>
           <div className="col mt-2">Jane</div>
         </div>
         <div className="row p-3 pb-2">
-        <div className="col-4">
+        <div className="col-3">
         <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
         </div>
           <div className="col mt-2">Jane</div>
         </div>
         <div className="row p-3 pb-2">
-        <div className="col-4">
+        <div className="col-3">
         <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={40} height={40} />          
         </div>
           <div className="col mt-2">Jane</div>

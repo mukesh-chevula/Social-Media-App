@@ -6,7 +6,7 @@ import Right from '../components/Right'
 
 const Home = () => {
   return (
-    <div style={{ overflow: 'scroll', maxHeight: '100vh' }}>
+    <div style={{ overflow: 'hidden', maxHeight: '100vh' }}>
       <Navbar style={{ position: 'fixed', zIndex: '1', width: '100%' }} />
       <div className="container-fluid" style={{ paddingTop: "80px" }}>
         <div className="row">

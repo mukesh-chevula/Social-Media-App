@@ -10,7 +10,7 @@ const Main = () => {
   };
 
   return (
-    <div className="container-fluid p-3" style={{ height: '100vh',zIndex:'inherit'}}>
+    <div className="container-fluid p-3 left-container mb-3" style={{ height: '100vh',zIndex:'inherit'}}>
       <div className="container shadow rounded p-4 my-3">
         <div className="row align-items-center">
           <div className="col-auto" style={{zIndex:'inherit'}}>      
