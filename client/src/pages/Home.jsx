@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Left from '../components/Left'
-import Main from '../components/Main'
-import Right from '../components/Right'
+import Navbar from '../Components/Navbar'
+import Left from '../Components/Left'
+import Main from '../Components/Main'
+import Right from '../Components/Right'
 
 const Home = () => {
   return (

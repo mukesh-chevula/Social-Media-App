@@ -5,7 +5,7 @@ import React from 'react'
 const Share = () => {
   return (
     <>
-        <div className="container shadow rounded p-4 my-3">
+        <div className="container shadow rounded p-4 my-1">
         <div className="row align-items-center">
           <div className="col-auto" style={{zIndex:'inherit'}}>      
             <img src="/assets/person/9.jpeg" alt="" className='img rounded-circle' width={50} height={50} style={{position:'',top:'3px',}}/>  
