@@ -1,15 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faComments, faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
 <div className="container-fluid bg-primary text-white px-4 py-3 position-fixed d-block mb-3">
       <div className="row d-flex">
         <div className="col-sm-6 col-md-3 fw-bolder position-relative pt-2 order-sm-0">
-        <button onClick={() => window.location.href = '/'} className="logo text-white text-decoration-none bg-transparent border-0">
-          <h4>SOCIAL APP</h4>
-          </button>
+          <Link to={'/'} className='text-decoration-none text-white'>        <h4>SOCIAL APP</h4>
+</Link>
         </div>
         <div className="col-md-5 col-sm-6 align-content-center justify-content-center order-sm-1">
           <div className="input-group"> 
