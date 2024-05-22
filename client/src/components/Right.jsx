@@ -5,7 +5,7 @@ import './Style.css'
 import { Users } from '../dummyData'
 import OnlineFriends from './OnlineFriends'
 
-const Right = ({ profile }) => {
+const Right = ({ user }) => {
   const HomeRight = () => {
     return (
       <div
@@ -45,15 +45,21 @@ const Right = ({ profile }) => {
           <div className='row fw-bold'>User Information:</div>
           <div className='row'>
             <div className='col text-body-emphasis'>City</div>
-            <div className='col float-start'>New York</div>
+            <div className='col float-start'>{user.city}</div>
           </div>
           <div className='row'>
             <div className='col text-body-emphasis'>From</div>
-            <div className='col float-start'>Madrid</div>
+            <div className='col float-start'>{user.from}</div>
           </div>
           <div className='row'>
             <div className='col text-body-emphasis'>Relatinship</div>
-            <div className='col float-start'>Married</div>
+            <div className='col float-start'>
+              {user.relationship == 1
+                ? 'Single'
+                : user.relationship == 2
+                ? 'Married'
+                : '-'}
+            </div>
           </div>
         </div>
 
@@ -234,7 +240,7 @@ const Right = ({ profile }) => {
   return (
     <div className='rightbar'>
       <div className='rightbarWrapper'>
-        {profile ? <ProfileRight /> : <HomeRight />}
+        {user ? <ProfileRight /> : <HomeRight />}
       </div>
     </div>
   )

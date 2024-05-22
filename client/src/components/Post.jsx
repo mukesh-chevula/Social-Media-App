@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { format } from 'timeago.js'
+import { Link } from 'react-router-dom'
 
 const Post = ({ post }) => {
   const [menuVisible, setMenuVisible] = useState(false)
@@ -28,7 +29,7 @@ const Post = ({ post }) => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8800/api/users/${post.userId}`
+          `http://localhost:8800/api/users?userId=${post.userId}`
         )
         setUser(response.data)
       } catch (error) {
@@ -43,13 +44,15 @@ const Post = ({ post }) => {
     <div className='container shadow rounded p-4'>
       <div className='row align-items-center'>
         <div className='col-1'>
-          <img
-            src={user.profilePicture || 'assets/person/no-avatar.webp'}
-            alt=''
-            className='img rounded-circle'
-            width={35}
-            height={35}
-          />
+          <Link to={`/profile/abc`}>
+            <img
+              src={user.profilePicture || '/assets/person/no-avatar.webp'}
+              alt=''
+              className='img rounded-circle'
+              width={35}
+              height={35}
+            />
+          </Link>
         </div>
         <div className='col'>
           <b>{user.username}</b>&nbsp;

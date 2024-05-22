@@ -9,7 +9,7 @@ const Main = () => {
       style={{ height: '100vh' }}
     >
       <Share />
-      <Feed />
+      <Feed username='mukesh' />
     </div>
   )
 }
