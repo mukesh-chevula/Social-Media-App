@@ -1,17 +1,32 @@
-import React from 'react'
-import Post from './Post';
-import {Posts} from '../dummyData'
+import React, { useEffect, useState } from 'react'
+import Post from './Post'
+import axios from 'axios'
 
+const Feed = () => {
+  const [posts, setPosts] = useState([])
 
-const Main = () => {
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get(
+          'http://localhost:8800/api/posts/timeline/66178a32b7dac6bebfd7764e'
+        )
+        setPosts(response.data)
+      } catch (error) {
+        console.error('Error fetching posts:', error)
+      }
+    }
+
+    fetchPosts()
+  }, [])
+
   return (
-    <div className="container-fluid p-3 mb-3" style={{ height: '100vh'}}>
-
-      {Posts.map((p)=>(
-      <Post key={p.id} post={p}/>
+    <div className='container-fluid p-3 mb-3' style={{ height: '100vh' }}>
+      {posts.map((p, index) => (
+        <Post key={index} post={p} />
       ))}
     </div>
   )
 }
 
-export default Main
+export default Feed
