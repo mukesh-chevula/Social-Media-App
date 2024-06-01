@@ -4,15 +4,17 @@ import Left from '../Components/Left'
 import Main from '../Components/Main'
 import Right from '../Components/Right'
 import axios from 'axios'
+import { useParams } from 'react-router'
 
 const Profile = () => {
   const [user, setUser] = useState({})
+  const username = useParams().username
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8800/api/users?username=mukesh`
+          `http://localhost:8800/api/users?username=${username}`
         )
         setUser(response.data)
       } catch (error) {
@@ -21,7 +23,7 @@ const Profile = () => {
     }
 
     fetchUser()
-  }, [])
+  }, [username])
 
   return (
     <div style={{ overflow: 'scroll', maxHeight: '100vh' }}>
@@ -63,10 +65,10 @@ const Profile = () => {
 
               <div className='row'>
                 <div className='col-7'>
-                  <Main />
+                  <Main username={username}/>
                 </div>
                 <div className='col'>
-                  <Right user={user}/>
+                  <Right user={user} />
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
@@ -24,7 +25,7 @@ const Register = () => {
               id='username'
               placeholder='Enter Your Username...'
             />
-            <label for='formId1'>Username</label>
+            <label htmlFor='formId1'>Username</label>
           </div>
           <div className='row form-floating mb-3'>
             <input
@@ -34,7 +35,7 @@ const Register = () => {
               id='email'
               placeholder='Enter Your Email...'
             />
-            <label for='formId1'>Email</label>
+            <label htmlFor='formId1'>Email</label>
           </div>
           <div className='row form-floating mb-3'>
             <input
@@ -44,7 +45,7 @@ const Register = () => {
               id='password'
               placeholder='Enter Your Password...'
             />
-            <label for='formId1'>Password</label>
+            <label htmlFor='formId1'>Password</label>
           </div>
           <div className='row form-floating mb-3'>
             <input
@@ -54,14 +55,14 @@ const Register = () => {
               id='confirmPassword'
               placeholder='Confirm Password'
             />
-            <label for='formId1'>Confirm Password</label>
+            <label htmlFor='formId1'>Confirm Password</label>
           </div>
           <div className='row d-grid gap-2'>
             <button
               type='button'
               name=''
               id='registerButton'
-              class='btn btn-primary'
+              className='btn btn-primary'
             >
               Register
             </button>
@@ -69,9 +70,12 @@ const Register = () => {
           <div className='row text-center mt-3'>
             <p>
               Already have an account?{' '}
-              <a href='/' className='fw-bold text-decoration-none text-dark'>
+              <Link
+                to='/login'
+                className='fw-bold text-decoration-none text-dark'
+              >
                 Login
-              </a>
+              </Link>
             </p>
           </div>
         </div>
