@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBell,
@@ -7,14 +7,15 @@ import {
   faUser
 } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext'
 
 const Navbar = () => {
+  const user = useContext(AuthContext)
   return (
     <div className='container-fluid bg-primary text-white px-4 py-3 position-fixed d-block mb-3'>
       <div className='row d-flex'>
         <div className='col-sm-6 col-md-3 fw-bolder position-relative pt-2 order-sm-0'>
           <Link to={'/'} className='text-decoration-none text-white'>
-            {' '}
             <h4>SOCIAL APP</h4>
           </Link>
         </div>
@@ -78,14 +79,20 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div className='col'>
-                  <img
-                    src='/assets/person/9.jpeg'
-                    alt=''
-                    className='img rounded-circle position-absolute'
-                    width={40}
-                    height={40}
-                    style={{ position: 'relative', top: '3px' }}
-                  />
+                  <Link to={`/profile/${user.username}`}>
+                    <img
+                      src={
+                        user.profilePicture
+                          ? '/client/public/assets/' + user.profilePicture
+                          : '/assets/person/no-avatar.webp'
+                      }
+                      alt=''
+                      className='img rounded-circle position-absolute'
+                      width={40}
+                      height={40}
+                      style={{ position: 'relative', top: '3px' }}
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
